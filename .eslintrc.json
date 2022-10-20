@@ -1,0 +1,14 @@
+{
+	"root": true,
+	"parser": "@babel/eslint-parser",
+	"rules": {
+		"semi": "off"
+	},
+	"extends": [
+		"eslint:recommended",
+		"prettier"
+	],
+	"plugins": [
+		"react"
+	]
+}
