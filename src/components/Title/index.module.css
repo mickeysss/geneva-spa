@@ -1,0 +1,56 @@
+.titleH1 {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    text-transform: uppercase;
+    color: var(--main-black);
+    font-family: "Orchidea Pro", serif;
+    font-size: 48px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 130%;
+}
+
+/*.titleH2:nth-of-type(1) {*/
+/*    padding: 123px 0;*/
+/*}*/
+
+.titleH2 {
+    text-transform: uppercase;
+
+    color: var(--main-black);
+
+    font-family: "Orchidea Pro", serif;
+    font-size: 48px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 130%;
+}
+
+.titleH3 {
+    display: flex;
+    align-items: center;
+
+    color: var(--main-black);
+
+    font-family: "Orchidea Pro", serif;
+    font-size: 48px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 110%;
+}
+
+/*@media screen and (max-width: 1100px) {*/
+/*    .titleH2 {*/
+/*        padding:0 20px 20px 20px;*/
+/*    }*/
+/*}*/
+
+
+@media screen and (max-width: 500px) {
+    .titleH2,
+    .titleH3{
+        font-size: 24px;
+    }
+
+}
