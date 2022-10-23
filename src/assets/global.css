@@ -1,9 +1,10 @@
 html,
-body {
+body,
+h1,h2{
   margin: 0;
   padding: 0;
 
-  color: var(--black);
+  color: var(--main-black);
   background: #F5F6F8;
 }
 
@@ -18,13 +19,20 @@ a {
 }
 
 :root {
-  --black: #3B434E;
-  --grey-light: #EBEBEB;
+  --black-gradient: 0deg, #464341 0%, #010101 100%;
+  --main-black: #141414;
   --white: #FFF;
-  --primary: #7653FC;
-  --primary-hover: #9F8AEE;
-  --red: #FC8360;
-  --green: #1DC37E;
-  --green-light: #C8F8E4;
-  --font-family: "Noto Sans KR", sans-serif;
+  --font-family: Manrope, sans-serif;
+}
+
+@font-face {
+  font-family: Manrope;
+  font-weight: 500;
+  src: url("./fonts/Manrope-Medium.woff");
+}
+
+@font-face {
+  font-family: "Orchidea Pro";
+  font-weight: 500;
+  src: url("./fonts/OrchideaPro-Medium.woff");
 }
