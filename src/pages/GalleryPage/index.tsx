@@ -32,8 +32,9 @@ export const GalleryPage = () => {
                         autoPlaySpeed={1000}
                         arrows={false}
                         responsive={responsiveBreakPoints}>
-                        {galleryImages.map((galleryImage) => (
+                        {galleryImages.map((galleryImage, index) => (
                             <img
+                                key={index}
                                 className={styles.sliderImage}
                                 src={galleryImage}
                                 alt="slider-image"

@@ -15,7 +15,7 @@ export const data = [
         title: 'ut aliquip ex ea commodo consequat',
         contentList: [
             {
-                id: 1,
+                id: 1.1,
                 contentImage: ContentImage1,
                 contentMobileImage: ContentMobileImage1,
                 contentMainText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
@@ -25,7 +25,7 @@ export const data = [
                 ],
             },
             {
-                id: 2,
+                id: 1.2,
                 contentImage: ContentImage2,
                 contentMobileImage: ContentMobileImage2,
                 contentMainText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
@@ -41,7 +41,7 @@ export const data = [
         title: 'ut aliquip ex ea commodo consequat',
         contentList: [
             {
-                id: 1,
+                id: 2.1,
                 contentImage: ContentImage3,
                 contentMobileImage: ContentMobileImage3,
                 contentMainText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
@@ -51,7 +51,7 @@ export const data = [
                 ],
             },
             {
-                id: 2,
+                id: 2.2,
                 contentImage: ContentImage4,
                 contentMobileImage: ContentMobileImage4,
                 contentMainText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',

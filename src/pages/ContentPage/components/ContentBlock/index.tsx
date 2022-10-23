@@ -21,8 +21,10 @@ export const ContentBlock: React.FC<IContentBlock> = ({ contentItem }): JSX.Elem
                     </div>
                     <div className={styles.contentBlockItem}>
                         <Title titleType="h3">{contentItem.contentMainText}</Title>
-                        {contentItem.contentAdditionalText.map((contentItemText: string) => (
-                            <p className={styles.contentAdditionalText}>{contentItemText}</p>
+                        {contentItem.contentAdditionalText.map((contentItemText: string, index) => (
+                            <p key={index} className={styles.contentAdditionalText}>
+                                {contentItemText}
+                            </p>
                         ))}
                     </div>
                 </div>
@@ -42,7 +44,9 @@ export const ContentBlock: React.FC<IContentBlock> = ({ contentItem }): JSX.Elem
                     <div className={styles.contentBlockItem}>
                         <Title titleType="h3">{contentItem.contentMainText}</Title>
                         {contentItem.contentAdditionalText.map((contentItemText: string) => (
-                            <p className={styles.contentAdditionalText}>{contentItemText}</p>
+                            <p key={contentItem.id} className={styles.contentAdditionalText}>
+                                {contentItemText}
+                            </p>
                         ))}
                     </div>
                 </div>
@@ -51,7 +55,9 @@ export const ContentBlock: React.FC<IContentBlock> = ({ contentItem }): JSX.Elem
                     <div className={styles.contentBlockItem}>
                         <Title titleType="h3">{contentItem.contentMainText}</Title>
                         {contentItem.contentAdditionalText.map((contentItemText: string) => (
-                            <p className={styles.contentAdditionalText}>{contentItemText}</p>
+                            <p key={contentItem.id} className={styles.contentAdditionalText}>
+                                {contentItemText}
+                            </p>
                         ))}
                     </div>
                     <div className={styles.contentBlockItem}>

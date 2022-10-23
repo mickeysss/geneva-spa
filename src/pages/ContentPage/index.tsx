@@ -14,7 +14,7 @@ export const ContentPage = ({ item }: IContentPage): JSX.Element => {
             <section className={styles.section}>
                 <Title titleType="h2">{item.title}</Title>
                 {item.contentList.map((contentItem: IContentItem) => (
-                    <ContentBlock contentItem={contentItem} />
+                    <ContentBlock key={contentItem.id} contentItem={contentItem} />
                 ))}
             </section>
         </div>
