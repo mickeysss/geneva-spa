@@ -1,0 +1,31 @@
+.page:nth-of-type(1) {
+    padding-top: 100px;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    padding-top: 72px;
+}
+
+.section > h2{
+    margin-left: 216px;
+}
+
+@media screen and (max-width: 1500px){
+    .section > h2{
+        margin: 0;
+        padding: 0 20px;
+    }
+    .page:nth-of-type(1) {
+        padding-top: 100px;
+    }
+
+}
+
+@media screen and (max-width: 700px){
+    .page:nth-of-type(1) {
+        padding-top: 60px;
+    }
+
+}
