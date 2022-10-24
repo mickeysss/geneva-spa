@@ -1,16 +1,15 @@
 html,
 body,
-h1,h2{
+h1,
+h2 {
   margin: 0;
   padding: 0;
-
   color: var(--main-black);
-  background: #F5F6F8;
+  background: #f5f6f8;
 }
 
 a {
   text-decoration: none;
-
   color: inherit;
 }
 
@@ -21,18 +20,18 @@ a {
 :root {
   --black-gradient: 0deg, #464341 0%, #010101 100%;
   --main-black: #141414;
-  --white: #FFF;
-  --font-family: Manrope, sans-serif;
+  --white: #ffffff;
+  --font-family: manrope, sans-serif;
 }
 
 @font-face {
   font-family: Manrope;
   font-weight: 500;
-  src: url("./fonts/Manrope-Medium.woff");
+  src: url('./fonts/Manrope-Medium.woff');
 }
 
 @font-face {
-  font-family: "Orchidea Pro";
+  font-family: 'Orchidea Pro';
   font-weight: 500;
-  src: url("./fonts/OrchideaPro-Medium.woff");
+  src: url('./fonts/OrchideaPro-Medium.woff');
 }

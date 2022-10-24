@@ -4,10 +4,6 @@ import ContentImage1 from './contentImgs/julia-v1.png';
 import ContentImage2 from './contentImgs/taisiia-v1.png';
 import ContentImage3 from './contentImgs/julia-v2.png';
 import ContentImage4 from './contentImgs/taisiia-v2.png';
-import ContentMobileImage1 from './contentMobileImgs/julia-v1-mobile.jpg';
-import ContentMobileImage2 from './contentMobileImgs/taisia-v1-mobile.jpg';
-import ContentMobileImage3 from './contentMobileImgs/julia-v2-mobile.jpg';
-import ContentMobileImage4 from './contentMobileImgs/taisia-v2-mobile.jpg';
 import Gallery1 from './contentImgs/slider/gallery-1.jpg';
 import Gallery2 from './contentImgs/slider/gallery-2.jpg';
 import Gallery3 from './contentImgs/slider/gallery-3.jpg';
@@ -24,10 +20,6 @@ export {
     ContentImage2,
     ContentImage3,
     ContentImage4,
-    ContentMobileImage1,
-    ContentMobileImage2,
-    ContentMobileImage3,
-    ContentMobileImage4,
     Gallery1,
     Gallery2,
     Gallery3,
