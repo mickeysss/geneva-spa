@@ -18,7 +18,7 @@ export const useScroll = () => {
         window.addEventListener('scroll', progressBarHandler);
 
         return () => window.removeEventListener('scroll', progressBarHandler);
-    }, [scroll, false]);
+    }, [scroll]);
 
     return Math.floor(scroll * 100);
 };

@@ -1,16 +1,17 @@
 import React from 'react';
 import { Title } from 'components';
-import styles from './index.module.css';
+import { IContentItem } from 'types';
 import { RESPONSIVE_SIZES } from 'consts';
 import { useMediaQuery } from 'utils/useMediaQuery';
-import { IContentItem } from 'types';
+import styles from './index.module.css';
 
 interface IContentBlock {
     contentItem: IContentItem;
 }
 
 export const ContentBlock: React.FC<IContentBlock> = ({ contentItem }): JSX.Element => {
-    const matches = (size: number) => useMediaQuery(`(max-width: ${size}px)`);
+    const DESKTOP_DEVICE = useMediaQuery(`(max-width: ${RESPONSIVE_SIZES.DESKTOP}px)`);
+    const TABLET_DEVICE = useMediaQuery(`(max-width: ${RESPONSIVE_SIZES.TABLET}px)`);
 
     return (
         <div className={styles.contentBlockContainer} key={contentItem.id}>
@@ -28,13 +29,13 @@ export const ContentBlock: React.FC<IContentBlock> = ({ contentItem }): JSX.Elem
                         ))}
                     </div>
                 </div>
-            ) : matches(RESPONSIVE_SIZES.DESKTOP) ? (
+            ) : DESKTOP_DEVICE ? (
                 <div className={styles.contentBlockItemContainerOdd}>
                     <div className={styles.contentBlockItem}>
                         <img
                             className={styles.contentBlockItemHero}
                             src={
-                                !matches(RESPONSIVE_SIZES.TABLET)
+                                !TABLET_DEVICE
                                     ? contentItem.contentImage
                                     : contentItem.contentMobileImage
                             }
@@ -64,7 +65,7 @@ export const ContentBlock: React.FC<IContentBlock> = ({ contentItem }): JSX.Elem
                         <img
                             className={styles.contentBlockItemHero}
                             src={
-                                !matches(RESPONSIVE_SIZES.TABLET)
+                                !TABLET_DEVICE
                                     ? contentItem.contentImage
                                     : contentItem.contentMobileImage
                             }

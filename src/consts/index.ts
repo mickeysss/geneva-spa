@@ -39,8 +39,4 @@ export const responsiveBreakPoints = {
         breakpoint: { max: 500, min: 0 },
         items: 1.5,
     },
-    mini: {
-        breakpoint: { max: 200, min: 0 },
-        items: 1,
-    },
 };

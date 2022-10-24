@@ -4,17 +4,19 @@ import 'react-multi-carousel/lib/styles.css';
 import { Title } from 'components';
 import { galleryImages, RESPONSIVE_SIZES, responsiveBreakPoints } from 'consts';
 import { useScroll } from 'utils/useScroll';
+import { useMediaQuery } from 'utils/useMediaQuery';
 import styles from './index.module.css';
-import { useMediaQuery } from '../../utils/useMediaQuery';
 
 export const GalleryPage = () => {
     const [scroll, setScroll] = useState(false);
-    const matches = (size: number) => useMediaQuery(`(max-width: ${size}px)`);
+    const MOBILE_DEVICE = useMediaQuery(`(max-width: ${RESPONSIVE_SIZES.MOBILE}px)`);
 
     const currentScroll = useScroll();
 
     useEffect(() => {
-        setScroll(currentScroll > 40 && currentScroll < 60);
+        if (currentScroll) {
+            setScroll(currentScroll > 40 && currentScroll < 60);
+        }
     }, [currentScroll]);
 
     return (
@@ -27,9 +29,10 @@ export const GalleryPage = () => {
                     <Carousel
                         keyBoardControl={true}
                         swipeable={true}
-                        customTransition="all 7s linear"
-                        autoPlay={!matches(RESPONSIVE_SIZES.MOBILE) && scroll}
+                        infinite={true}
+                        customTransition="all 2s linear"
                         autoPlaySpeed={1000}
+                        autoPlay={!MOBILE_DEVICE && scroll}
                         arrows={false}
                         responsive={responsiveBreakPoints}>
                         {galleryImages.map((galleryImage, index) => (

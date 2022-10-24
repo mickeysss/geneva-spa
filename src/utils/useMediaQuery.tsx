@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 export function useMediaQuery(query: string) {
     const getMatches = (query: string) => {
@@ -10,9 +10,7 @@ export function useMediaQuery(query: string) {
 
     const [matches, setMatches] = useState(getMatches(query));
 
-    function handleChange() {
-        setMatches(getMatches(query));
-    }
+    const handleChange = useCallback(() => setMatches(getMatches(query)), [query]);
 
     useEffect(() => {
         const matchMedia = window.matchMedia(query);
@@ -32,7 +30,7 @@ export function useMediaQuery(query: string) {
                 matchMedia.removeEventListener('change', handleChange);
             }
         };
-    }, [query]);
+    }, [handleChange, query]);
 
     return matches;
 }
