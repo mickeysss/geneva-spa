@@ -1,7 +1,7 @@
 # Geneva SPA
 
 This application was created by: 
-React JS, SCSS,CSS-modules,Hooks
+React Typescript,CSS-modules,Hooks
 
 ## Available Scripts
 
