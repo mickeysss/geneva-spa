@@ -1,0 +1,26 @@
+.titleH1,
+.titleH2,
+.titleH3 {
+  text-transform: uppercase;
+  color: var(--main-black);
+  font-family: 'Orchidea Pro', serif;
+  font-size: 48px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 130%;
+}
+
+.titleH1 {
+  margin: 0;
+}
+
+.titleH3 {
+  line-height: 110%;
+}
+
+@media screen and (max-width: 500px) {
+  .titleH2,
+  .titleH3 {
+    font-size: 24px;
+  }
+}

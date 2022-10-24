@@ -1,0 +1,37 @@
+html,
+body,
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+  color: var(--main-black);
+  background: #f5f6f8;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --black-gradient: 0deg, #464341 0%, #010101 100%;
+  --main-black: #141414;
+  --white: #ffffff;
+  --font-family: manrope, sans-serif;
+}
+
+@font-face {
+  font-family: Manrope;
+  font-weight: 500;
+  src: url('./fonts/Manrope-Medium.woff');
+}
+
+@font-face {
+  font-family: 'Orchidea Pro';
+  font-weight: 500;
+  src: url('./fonts/OrchideaPro-Medium.woff');
+}
