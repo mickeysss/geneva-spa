@@ -1,16 +1,17 @@
 import React from 'react';
-import { Header, Footer } from 'components';
-import { ContentPage } from 'pages/ContentPage';
-import { GalleryPage } from 'pages/GalleryPage';
+import { Header } from './Header';
+import { Main } from './Main';
+import { Footer } from './Footer';
 import { RESPONSIVE_SIZES } from 'consts';
+import { IDataItem } from 'types';
 import { useMediaQuery } from 'utils/useMediaQuery';
 import { LogoIcon, PhoneIcon } from 'assets/imgs';
-import { data } from 'mock';
 
-const pageOne = Object.assign({}, ...data.filter((page) => page.pageId === 1));
-const pageTwo = Object.assign({}, ...data.filter((page) => page.pageId === 2));
+interface ILayout {
+    state: IDataItem[];
+}
 
-export const Layout = (): JSX.Element => {
+export const Layout = ({ state }: ILayout): JSX.Element => {
     const TABLET_DEVICE = useMediaQuery(`(max-width: ${RESPONSIVE_SIZES.TABLET}px)`);
 
     return (
@@ -23,9 +24,7 @@ export const Layout = (): JSX.Element => {
                     <PhoneIcon />
                 )}
             </Header>
-            <ContentPage item={pageOne} />
-            <GalleryPage />
-            <ContentPage item={pageTwo} />
+            <Main content={state} />
             <Footer>© TEST, 1022–2022</Footer>
         </>
     );
