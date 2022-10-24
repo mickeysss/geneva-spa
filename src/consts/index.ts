@@ -1,25 +1,3 @@
-import {
-    Gallery1,
-    Gallery2,
-    Gallery3,
-    Gallery4,
-    Gallery5,
-    Gallery6,
-    Gallery7,
-    Gallery8,
-} from 'assets/imgs';
-
-export const galleryImages = [
-    Gallery1,
-    Gallery2,
-    Gallery3,
-    Gallery4,
-    Gallery5,
-    Gallery6,
-    Gallery7,
-    Gallery8,
-];
-
 export enum RESPONSIVE_SIZES {
     DESKTOP = 1149,
     TABLET = 768,
