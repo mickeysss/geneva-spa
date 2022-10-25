@@ -5,18 +5,19 @@ import { IContentItem, IDataItem } from 'types';
 import styles from './index.module.css';
 
 interface IContentPage {
-    item: IDataItem;
+    pageData: IDataItem;
 }
 
-export const ContentPage = ({ item }: IContentPage): JSX.Element => {
+export const ContentPage = ({ pageData }: IContentPage): JSX.Element => {
     return (
-        <div className={styles.page}>
-            <section className={styles.section}>
-                <Title titleType="h2">{item.title}</Title>
-                {item.contentList.map((contentItem: IContentItem) => (
-                    <ContentBlock key={contentItem.id} contentItem={contentItem} />
-                ))}
-            </section>
-        </div>
+        <section className={styles.pageSection}>
+            <div className={styles.sectionWrapper}>
+                <Title titleType="h2">{pageData.title}</Title>
+                {pageData.contentList &&
+                    pageData.contentList.map((contentItem: IContentItem) => (
+                        <ContentBlock key={contentItem.id} contentItem={contentItem} />
+                    ))}
+            </div>
+        </section>
     );
 };
