@@ -2,12 +2,17 @@ import React, { useEffect, useState } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { Title } from 'components';
-import { galleryImages, RESPONSIVE_SIZES, responsiveBreakPoints } from 'consts';
+import { RESPONSIVE_SIZES, responsiveBreakPoints } from 'consts';
 import { useScroll } from 'utils/useScroll';
 import { useMediaQuery } from 'utils/useMediaQuery';
+import { IDataItem } from 'types';
 import styles from './index.module.css';
 
-export const GalleryPage = () => {
+interface IGalleryPage {
+    pageData: IDataItem;
+}
+
+export const GalleryPage = ({ pageData }: IGalleryPage): JSX.Element => {
     const [scroll, setScroll] = useState(false);
     const MOBILE_DEVICE = useMediaQuery(`(max-width: ${RESPONSIVE_SIZES.MOBILE}px)`);
 
@@ -22,10 +27,10 @@ export const GalleryPage = () => {
     return (
         <section className={styles.galleryContainer}>
             <Title justifyStart={true} titleType="h2">
-                Lorem ipsum dolor sit.
+                {pageData.title}
             </Title>
             <div className={styles.sliderWrapper}>
-                {galleryImages.length && (
+                {pageData.images && (
                     <Carousel
                         keyBoardControl={true}
                         swipeable={true}
@@ -35,7 +40,7 @@ export const GalleryPage = () => {
                         autoPlay={!MOBILE_DEVICE && scroll}
                         arrows={false}
                         responsive={responsiveBreakPoints}>
-                        {galleryImages.map((galleryImage, index) => (
+                        {pageData.images.map((galleryImage, index) => (
                             <img
                                 key={index}
                                 className={styles.sliderImage}

@@ -11,11 +11,10 @@ interface IContentBlock {
 
 export const ContentBlock: React.FC<IContentBlock> = ({ contentItem }): JSX.Element => {
     const DESKTOP_DEVICE = useMediaQuery(`(max-width: ${RESPONSIVE_SIZES.DESKTOP}px)`);
-    const TABLET_DEVICE = useMediaQuery(`(max-width: ${RESPONSIVE_SIZES.TABLET}px)`);
 
     return (
         <div className={styles.contentBlockContainer} key={contentItem.id}>
-            {contentItem.id % 2 !== 0 ? (
+            {contentItem.position === 'LEFT' ? (
                 <div className={styles.contentBlockItemContainerEven}>
                     <div className={styles.contentBlockItem}>
                         <img src={contentItem.contentImage} alt="person" />
@@ -34,11 +33,7 @@ export const ContentBlock: React.FC<IContentBlock> = ({ contentItem }): JSX.Elem
                     <div className={styles.contentBlockItem}>
                         <img
                             className={styles.contentBlockItemHero}
-                            src={
-                                !TABLET_DEVICE
-                                    ? contentItem.contentImage
-                                    : contentItem.contentMobileImage
-                            }
+                            src={contentItem.contentImage}
                             alt="person"
                         />
                     </div>
@@ -64,11 +59,7 @@ export const ContentBlock: React.FC<IContentBlock> = ({ contentItem }): JSX.Elem
                     <div className={styles.contentBlockItem}>
                         <img
                             className={styles.contentBlockItemHero}
-                            src={
-                                !TABLET_DEVICE
-                                    ? contentItem.contentImage
-                                    : contentItem.contentMobileImage
-                            }
+                            src={contentItem.contentImage}
                             alt="person"
                         />
                     </div>

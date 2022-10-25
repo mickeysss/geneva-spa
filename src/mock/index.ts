@@ -1,12 +1,28 @@
-import { ContentImage1, ContentImage2, ContentImage3, ContentImage4 } from 'assets/imgs';
+import {
+    ContentImage1,
+    ContentImage2,
+    ContentImage3,
+    ContentImage4,
+    Gallery1,
+    Gallery2,
+    Gallery3,
+    Gallery4,
+    Gallery5,
+    Gallery6,
+    Gallery7,
+    Gallery8,
+} from 'assets/imgs';
+import { IDataItem } from '../types';
 
-export const data = [
+export const data: IDataItem[] = [
     {
+        typeRef: 'TEXT',
         pageId: 1,
         title: 'ut aliquip ex ea commodo consequat',
         contentList: [
             {
                 id: 1.1,
+                position: 'LEFT',
                 contentImage: ContentImage1,
                 contentMainText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
                 contentAdditionalText: [
@@ -16,6 +32,7 @@ export const data = [
             },
             {
                 id: 1.2,
+                position: 'RIGHT',
                 contentImage: ContentImage2,
                 contentMainText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
                 contentAdditionalText: [
@@ -26,11 +43,19 @@ export const data = [
         ],
     },
     {
+        typeRef: 'GALLERY',
+        title: 'Lorem ipsum dolor sit.',
+        pageId: 3,
+        images: [Gallery1, Gallery2, Gallery3, Gallery4, Gallery5, Gallery6, Gallery7, Gallery8],
+    },
+    {
+        typeRef: 'TEXT',
         pageId: 2,
         title: 'ut aliquip ex ea commodo consequat',
         contentList: [
             {
                 id: 2.1,
+                position: 'LEFT',
                 contentImage: ContentImage3,
                 contentMainText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
                 contentAdditionalText: [
@@ -40,6 +65,7 @@ export const data = [
             },
             {
                 id: 2.2,
+                position: 'RIGHT',
                 contentImage: ContentImage4,
                 contentMainText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
                 contentAdditionalText: [
