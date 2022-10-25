@@ -1,13 +1,15 @@
 export interface IContentItem {
     id: number;
     contentImage: string;
-    contentMobileImage: string;
     contentMainText: string;
     contentAdditionalText: string[];
+    position: string;
 }
 
 export interface IDataItem {
+    typeRef: string;
     pageId: number;
-    title: string;
-    contentList: IContentItem[];
+    title?: string;
+    images?: string[];
+    contentList?: IContentItem[];
 }
