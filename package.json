@@ -1,6 +1,7 @@
 {
   "name": "geneva-spa",
   "version": "0.1.0",
+  "author": "Michael Sargsyan",
   "private": true,
   "dependencies": {
     "@babel/eslint-parser": "^7.19.1",
