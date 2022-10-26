@@ -6,7 +6,7 @@
 }
 
 .sliderWrapper {
-  margin-top: 56px;
+  padding-top: 123px;
 }
 
 .sliderImage {
@@ -16,15 +16,21 @@
 }
 
 @media screen and (max-width: 1500px) {
+
   .sliderImage {
     width: 100%;
     max-height: initial;
+  }
+
+  .sliderWrapper {
+    padding: 70px 0;
   }
 
   .galleryContainer {
     overflow: hidden;
     margin-left: 20px;
   }
+
 }
 
 @media screen and (max-width: 550px) {

@@ -1,11 +1,18 @@
 .pageSection:nth-of-type(1) {
-  padding-top: 100px;
+  padding-top: 300px;
+}
+
+.pageSection:nth-of-type(3) {
+  padding-top: 160px;
 }
 
 .sectionWrapper {
   display: flex;
   flex-direction: column;
-  padding-top: 72px;
+}
+
+.pageSection > .sectionWrapper:nth-of-type(2) {
+  padding-top: 0;
 }
 
 .sectionWrapper > h2 {
@@ -20,12 +27,21 @@
   }
 
   .pageSection:nth-of-type(1) {
-    padding-top: 100px;
+    padding-top: 200px;
   }
+
+  .pageSection:nth-of-type(3) {
+    padding-top: 0;
+  }
+
 }
 
 @media screen and (max-width: 700px) {
-  .sectionWrapper:nth-of-type(1) {
+  .pageSection:nth-of-type(1) {
     padding-top: 60px;
   }
+  .sectionWrapper:nth-of-type(1) {
+    padding-top: 0;
+  }
+
 }
