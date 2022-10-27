@@ -2,7 +2,7 @@ import React from 'react';
 import { Title } from 'components';
 import { IContentItem } from 'types';
 import { RESPONSIVE_SIZES } from 'consts';
-import { useMediaQuery } from 'utils/useMediaQuery';
+import { useMediaQuery } from 'hooks/useMediaQuery';
 import styles from './index.module.css';
 
 interface IContentBlock {

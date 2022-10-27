@@ -4,7 +4,7 @@ import { Main } from './Main';
 import { Footer } from './Footer';
 import { RESPONSIVE_SIZES } from 'consts';
 import { IDataItem } from 'types';
-import { useMediaQuery } from 'utils/useMediaQuery';
+import { useMediaQuery } from 'hooks/useMediaQuery';
 import { LogoIcon, PhoneIcon } from 'assets/imgs';
 
 interface ILayout {

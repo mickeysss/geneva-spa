@@ -3,8 +3,8 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { Title } from 'components';
 import { RESPONSIVE_SIZES, responsiveBreakPoints } from 'consts';
-import { useScroll } from 'utils/useScroll';
-import { useMediaQuery } from 'utils/useMediaQuery';
+import { useScroll } from 'hooks/useScroll';
+import { useMediaQuery } from 'hooks/useMediaQuery';
 import { IDataItem } from 'types';
 import styles from './index.module.css';
 
